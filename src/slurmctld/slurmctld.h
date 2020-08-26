@@ -985,6 +985,8 @@ typedef struct {
 	char *tres_per_node;		/* semicolon delimited list of TRES=# values */
 	char *tres_per_socket;		/* semicolon delimited list of TRES=# values */
 	char *tres_per_task;		/* semicolon delimited list of TRES=# values */
+	bool whole;                     /* If we are allocating whole nodes or
+					 * not */
 } step_record_t;
 
 typedef struct {

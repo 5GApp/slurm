@@ -603,6 +603,7 @@ env_vars_t env_vars[] = {
   { "SLURM_WAIT", 'W' },
   { "SLURM_WAIT4SWITCH", LONG_OPT_SWITCH_WAIT },
   { "SLURM_WCKEY", LONG_OPT_WCKEY },
+  { "SLURM_WHOLE", LONG_OPT_WHOLE },
   { "SLURM_WORKING_DIR", 'D' },
   { "SLURMD_DEBUG", LONG_OPT_SLURMD_DEBUG },
   { NULL }
@@ -1412,7 +1413,7 @@ static void _usage(void)
 "            [--cpu-bind=...] [--mem-bind=...] [--network=type]\n"
 "            [--ntasks-per-node=n] [--ntasks-per-socket=n] [reservation=name]\n"
 "            [--ntasks-per-core=n] [--mem-per-cpu=MB] [--preserve-env]\n"
-"            [--profile=...]\n"
+"            [--profile=...] [--whole]\n"
 "            [--mail-type=type] [--mail-user=user] [--nice[=value]]\n"
 "            [--prolog=fname] [--epilog=fname]\n"
 "            [--task-prolog=fname] [--task-epilog=fname]\n"
@@ -1533,6 +1534,8 @@ static void _help(void)
 "  -W, --wait=sec              seconds to wait after first task exits\n"
 "                              before killing job\n"
 "      --wckey=wckey           wckey to run job under\n"
+"      --whole                 Use entire node(s) in the allocation\n"
+"                              for the step\n"
 "  -X, --disable-status        Disable Ctrl-C status feature\n"
 "\n"
 "Constraint options:\n"
