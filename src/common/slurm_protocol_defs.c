@@ -3525,6 +3525,8 @@ extern char *node_state_string(uint32_t inx)
 		}
 	}
 
+	if (inx == NODE_STATE_CLOUD)
+		return "CLOUD";
 	if (inx == NODE_STATE_CANCEL_REBOOT)
 		return "CANCEL_REBOOT";
 	if (inx == NODE_STATE_POWERING_DOWN)
@@ -3721,6 +3723,8 @@ extern char *node_state_string_compact(uint32_t inx)
 		}
 	}
 
+	if (inx == NODE_STATE_CLOUD)
+		return "CLOUD";
 	if (inx == NODE_STATE_CANCEL_REBOOT)
 		return "CANC_R";
 	if (inx == NODE_STATE_POWERING_DOWN)
